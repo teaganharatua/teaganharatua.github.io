@@ -1,15 +1,22 @@
 'use strict';
 
-self.addEventListener('install', function(event) {
+const filesToCache = [
+  '/',
+  'assets/duck.gif',
+  'index.html',
+  'main.js',
+  'sw.js',
+  
+];
+
+const staticCacheName = 'pages-cache-v1';
+
+self.addEventListener('install', event => {
+  console.log('Attempting to install service worker and cache static assets');
   event.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      return cache.addAll(
-        [
-          '/main.js',
-          '/index.html',
-          '/assets/duck.gif',
-        ]
-      );
+    caches.open(staticCacheName)
+    .then(cache => {
+      return cache.addAll(filesToCache);
     })
   );
 });
@@ -26,11 +33,10 @@ self.addEventListener('fetch', event => {
       console.log('Network request for ', event.request.url);
       return fetch(event.request)
 
-      // TODO 4 - Add fetched files to the cache
 
     }).catch(error => {
 
-      // TODO 6 - Respond with custom offline page
+      
 
     })
   );

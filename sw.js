@@ -3,7 +3,7 @@ const filesToCache = [
   '/images',
   'assets/header.png',
   'index.html',
-  //'scripts/main.js',
+  'scripts/main.js',
   'sw.js',
   '404.html',
   'offline.html',

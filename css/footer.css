@@ -1,0 +1,125 @@
+#ff>div>div, #ff ul, #ffJoin, #foot nav,  #foot p
+{display:inline-block; vertical-align:top;}
+
+#ftLogo a, #ftLogo h5, #refresh{display:inline-block; vertical-align:middle;}
+
+#refresh{width:30px;}
+#ff{width:100%; background-color:rgb(250,250,250); position:absolute; bottom:0px;}
+
+#ff>div{margin:0 auto;}
+#ffLi{line-height:1.5; padding:10px 0;}
+#ff p{color:rgb(80,80,80); padding:0px; margin:0px;}
+#ff a{line-height:1.5; color:rgb(80,80,80); font-weight:normal; margin:2px 0;}
+#ff a:hover{color:#75bd26; text-decoration:underline}
+#ffJoin{font-size:17px; font-weight:bold;}
+#ff h6{font-weight:normal; margin:5px 0 ;}
+#ffLi h6{font-size:15px; color:gray;}
+#ftLogo a, #ftLogo i{width:30px; height:30px; display:inline-block;}
+
+/*end footer*/
+#ff ul{list-style-type:none; margin:0; padding:0;}
+#foot p{font-size:10px;}
+#foot a{font-size:12px; font-weight:bold; margin:0 10px 5px 0; color:black;}
+a.footer_top{font-size:14px; margin:0 50px 0 3px; float:right;}
+a.footer_top:hover, a.footer:active{color:#e0dfdb;}
+
+@media only screen and (max-width:639px){
+	#ftLogo a{margin-right:10px;}
+    a.join{padding:3px 10px 2px 10px!important; border-radius:5px;}
+
+	#ff>div, #ff>div>div{width:300px;}
+	#ff ul:nth-child(n+2){display:none;}
+	#ffJoin{float:right;}
+
+	#foot, #foot nav{width:300px;}
+    #foot, #foot p, #foot nav{padding:5px 0;}
+}
+@media only screen and (min-width:640px) and (max-width:979px){
+    #ftLogo h5{font-size:13px;}
+	#heI{max-width:150px;}
+    #heI>ul>li>nav, #heI>ul>li>a{padding:12px 5px;}
+
+	#ff>div, #ff>div>div{width:620px;}
+	#ff ul{padding:5px; width:145px;}
+
+    #foot p, #foot nav{padding:0 5px;}
+	#foot p{width:330px;}
+    #foot nav{width:240px;}
+
+    a.join{font-size:17px;}
+}
+@media only screen and (min-width:640px){
+	#ftLogo a{margin-top:5px}
+	#ftLogo h5 {margin-top:10px;}
+	#ff{padding:10px 0;}
+	#ff a, #sbmn>ul>li>span{font-size:12px;}
+	#ff ul>li{padding:3px 0;}
+	#foot{border-top:1px solid rgb(235,235,235);}
+
+	#ffJoin{margin:-3px 0 0 0!important; float:right;}
+
+	a.join{padding:3px 10px 2px 10px!important; border-radius:5px;}
+	#heAJoin:hover, a.join:hover{opacity:0.8;}
+    #heAJoin{margin:15px 10px!important;}
+    #foot{padding:15px 0;}
+}
+@media only screen and (min-width:980px){
+    #ftLogo h5{font-size:15px;}
+
+	#tempat, #heCentre, #ff>div, #ff>div>div{width:960px!important;}
+	#ff a{font-size:13px;}
+	#ff ul{width:199px!important; padding:0px 20px!important;}
+
+    #foot p, #foot nav{padding:0 20px;}
+	#foot p{width:580px;}
+    #foot nav{width:270px;}
+
+	a.join{font-size:17px;}
+}
+
+/*Footer*/
+.whole{width:100%;}
+.whole>div{margin:0 auto;}
+
+#provd{background-color:#035292; margin-top:20px; color:white;} /*#d1ebb5*/
+#provd>div>div, #provd dt{display:inline-block; vertical-align:top; margin:0;}
+
+#provd h2, #provd h3{font-weight:normal; color:white; padding:0;}
+#provd h3{margin:10px 0;}
+#provd p, #provd li{opacity:0.8}
+#provd li{padding:2px 0px 2px 15px;}
+#provd ul{padding-left:20px; list-style-type: disc;}
+
+#crowd{background-color:#85a8c2; color:white; padding:30px 0; text-align:center;} /*#d1ebb5*/
+
+#crowdJoin{
+	font-size:14px; padding:10px 20px; margin-top:20px;
+	color:white; background-color:#035292;
+	display:inline-block; border-radius:5px;
+}
+#crowdJoin:hover{opacity:0.8;}
+
+@media only screen and (max-width:639px){
+	.whole>div{width:300px; padding:10px 0;}
+    #provd h2{margin:10px; font-size:17px;}
+    #provd h3{font-size:14px;}
+	#provd img{width:50px;}
+
+	#provd dt{padding:10px; width:130px;}
+    #provd dt, #provd li{font-size:11px;}
+	#crowd img{width:75%;}
+}
+@media only screen and (min-width:640px) and (max-width:979px){
+	.whole>div{width:620px; padding:20px 0;}
+	#provd dt{padding:10px; width:135px; font-size:11.5px;}
+	#crowd img{width:50%;}
+}
+@media only screen and (min-width:640px){
+    #provd h2{margin:10px 20px; font-size:20px;}
+    #provd h3{font-size:16px;}
+	#provd img{width:70px; padding:20px 0;}
+}
+@media only screen and (min-width:980px){
+	.whole>div{width:960px; padding:30px 0;}
+	#provd dt{width:199px!important; padding:0px 20px!important; font-size:12px;}
+}

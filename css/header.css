@@ -1,0 +1,85 @@
+html, body{background-color:rgb(255,255,255); height:100%;}
+/*color*/
+header{background-color:white;}
+
+/*MAINS*/
+header{
+	width:100%; z-index:10000;
+	position:relative; top:0px; left:0px; border-bottom:solid 1px rgb(240,240,240);
+}
+#content{width:100%;}
+
+/*FOBUMA HEADER*/
+header>nav, #wideS{margin:0 auto; position:relative;}
+#head-logo, header>nav>nav, .daftar,
+#head-search label, #head-search>form>ul, .head-links li
+{display:inline-block; vertical-align:top;}
+
+.head-links{list-style:none; padding:0;}
+
+/*commons*/
+#navCart{height:25px; padding:15px 10px;}
+
+/*Logo*/
+#head-logo>a{height:25px; display:inline-block;}
+#head-logo img{width:100px;}
+
+/*Account*/
+#head-account{position:absolute; bottom:0px; right:-1px; z-index:100000;}
+#head-account>ul>li>a{font-size:13px; color:rgb(40,40,40);}
+#head-account>ul>li:hover .icHe,#head-account>ul>li:hover span{opacity:0.7;}
+
+/*logged out*/
+#heAJoin{height:15px!important; width:40px; overflow:hidden; padding:4px 5px 6px 5px!important; border-radius:4px;}
+#heAJoin, a.join{background-color:#75bd26; color:white!important;}
+
+/*logged in*/
+#head-account>ul>li>a{display:block; cursor:pointer;}
+#head-account>ul{margin:0px; padding:0;}
+#head-account>ul>li{margin:0px; display:inline-block; vertical-align:top;}
+#head-account span{height:19px; font-size:12px;}
+
+@media only screen and (max-width:639px){
+	header{border-top:solid 1px rgb(220,220,220); height:70px; padding:10px 0;}
+	header>nav{width:300px;}
+
+	#head-logo>a, #head-account{height:30px; padding:0; border:0;}
+	#head-logo, #head-account, #head-account,#head-account>ul>li{margin:3px 3px 0 5px;}
+	#head-search-labels, #head-search>form>ul, #login i,#head-account span{display:none!important;}
+	#head-search>ul{display:none;}
+	#head-account{top:3px;}
+	#head-account>ul>li>a>i{margin:0 5px;}
+}
+@media only screen and (min-width:640px) and (max-width:979px){
+	header>nav{width:640px;}
+
+	#head-account>ul>li>nav, #head-account>ul>li>a{
+		padding:20px 10px; height:40px; text-align:center;
+	}
+	#head-logo>a{
+		padding:22px 10px; height:36px; text-align:center;
+	}
+	#head-search{margin:14px 10px;}
+	#head-account{max-width:180px;}
+	#head-account .hVa, #head-account span{display:block; text-align:center;}
+}
+@media only screen and (min-width:640px){
+	header>nav, header>nav>nav{height:80px;}
+	#head-search{position:relative; height:70px;}
+	#head-search-labels{left:0; top:40px; position:absolute;}
+	#head-search-labels>a{margin-right:10px;}
+	#head-search>ul{right:0; top:40px; margin:0; position:absolute;}
+	.head-links li{margin-left:10px;}
+	#head-search a{color:black; cursor:pointer;}
+}
+
+@media only screen and (min-width:980px){
+	header>nav{text-align:center;}
+	#head-middle{margin:0 auto; width:720px;}
+	#head-logo{position:absolute; bottom:0px; left:70px; z-index:10;}
+	#head-logo>a{padding:25px 10px; height:40px;}
+	#head-search{margin:14px 70px;}
+	#head-account{max-width:270px!important;}
+	#head-account>ul>li>nav, #head-account>ul>li>a{padding:30px 10px; height:20px;}
+	#head-account>ul>li>a{padding-right:15px;}
+}

@@ -1,13 +1,16 @@
-'use strict';
 
 const filesToCache = [
   '/',
-  'assets/duck.gif',
+  '/images',
+  'assets/header.png',
   'index.html',
-  'main.js',
+  //'scripts/main.js',
   'sw.js',
   '404.html',
   'offline.html',
+  'css/header.css',
+  'css/footer.css',
+  'manifest.json',
 ];
 
 const staticCacheName = 'pages-cache-v2';
@@ -23,7 +26,7 @@ self.addEventListener('install', event => {
   );
 });
 
-//initialize new service worker
+//initialize new service worker, and delete old cache if change is detected in cached files
 self.addEventListener('activate', event => {
   console.log('Activating new service worker...');
 
@@ -68,5 +71,31 @@ self.addEventListener('fetch', event => {
       console.log('Error, ', error);
       return caches.match('offline.html');
     })
+  );
+});
+
+//push notification template(?)
+self.addEventListener('push', function(event) {
+  console.log('[Service Worker] Push Received.');
+  console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
+
+  const title = 'push notification example';
+  const options = {
+    body: event.data.text(),
+    icon: 'images/icon.png',
+    badge: 'images/badge.png'
+  };
+
+  event.waitUntil(self.registration.showNotification(title, options));
+});
+
+//to close the notification, and go to a website
+self.addEventListener('notificationclick', function(event) {
+  console.log('[Service Worker] Notification click Received.');
+
+  event.notification.close();
+
+  event.waitUntil(
+    clients.openWindow('https://www.kompas.com')
   );
 });
